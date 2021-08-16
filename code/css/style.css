@@ -1,0 +1,62 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.construct--callout-floating {
+  display: block;
+  margin: 40px 0 30px;
+  background-color: rebeccapurple;
+}
+
+.construct--callout-floating .construct--callout-floating--inner {
+  background: #dddddc;
+  padding: 20px;
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .construct--callout-floating .construct--callout-floating--inner {
+    padding: 30px;
+    padding-top: 40px;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.construct--callout-floating .construct--callout-floating--inner .icon-container {
+  width: 75px;
+  padding-right: 15px;
+}
+
+.construct--callout-floating .construct--callout-floating--inner .icon-container img {
+  position: static;
+  width: 65px;
+}
+
+@media (min-width: 768px) {
+  .construct--callout-floating .construct--callout-floating--inner .icon-container {
+    width: 100%;
+    padding-right: 0;
+  }
+  .construct--callout-floating .construct--callout-floating--inner .icon-container img {
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: -30px;
+    left: 0;
+  }
+}
+
+.construct--callout-floating .construct--callout-floating--inner .content-container h3,
+.construct--callout-floating .construct--callout-floating--inner .content-container h2,
+.construct--callout-floating .construct--callout-floating--inner .content-container h1,
+.construct--callout-floating .construct--callout-floating--inner .content-container h4 {
+  margin-top: 0;
+}
+/*# sourceMappingURL=style.css.map */

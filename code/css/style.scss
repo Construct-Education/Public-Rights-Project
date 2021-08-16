@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+// SOURCE: https://css-tricks.com/snippets/sass/mixin-manage-breakpoints/
+// RESPONSIVE BREAKPOINTS
+$breakpoints: ( "small": ( min-width: 768px, ), "medium": ( min-width: 992px, ), "large": ( min-width: 1200px, ), ) !default;
+/// Mixin to manage responsive breakpoints
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin respond-to($breakpoint) {
+    // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+        // Prints a media query based on the value
+        @media #{inspect(map-get($breakpoints, $breakpoint))} {
+            @content;
+        }
+    }
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "+"Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+// CALLOUTS
+.construct--callout-floating {
+    display: block;
+    margin: 40px 0 30px;
+    background-color: rebeccapurple;
+    .construct--callout-floating--inner {
+        background: #dddddc;
+        padding: 20px;
+        width: 100%;
+        position: relative;
+        display: flex;
+        @include respond-to("small") {
+            & {
+                padding: 30px;
+                padding-top: 40px;
+                width: 80%;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+        .icon-container {
+            width: 75px;
+            padding-right: 15px;
+            img {
+                position: static;
+                width: 65px;
+            }
+            @include respond-to("small") {
+                & {
+                    width: 100%;
+                    padding-right: 0;
+                }
+                img {
+                    position: absolute;
+                    transform: translateX(-50%);
+                    top: -30px;
+                    left: 0;
+                }
+            }
+        }
+        .content-container {
+            h3,
+            h2,
+            h1,
+            h4 {
+                margin-top: 0;
+            }
+        }
+    }
+}
