@@ -6,7 +6,6 @@
 .construct--callout-floating {
   display: block;
   margin: 40px 0 30px;
-  background-color: rebeccapurple;
 }
 
 .construct--callout-floating .construct--callout-floating--inner {
@@ -23,7 +22,7 @@
   .construct--callout-floating .construct--callout-floating--inner {
     padding: 30px;
     padding-top: 40px;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     display: block;
   }

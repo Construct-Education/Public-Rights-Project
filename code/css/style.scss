@@ -26,7 +26,6 @@ $breakpoints: ( "small": ( min-width: 768px, ), "medium": ( min-width: 992px, ),
 .construct--callout-floating {
     display: block;
     margin: 40px 0 30px;
-    background-color: rebeccapurple;
     .construct--callout-floating--inner {
         background: #dddddc;
         padding: 20px;
@@ -37,7 +36,7 @@ $breakpoints: ( "small": ( min-width: 768px, ), "medium": ( min-width: 992px, ),
             & {
                 padding: 30px;
                 padding-top: 40px;
-                width: 80%;
+                width: 90%;
                 margin: 0 auto;
                 display: block;
             }
