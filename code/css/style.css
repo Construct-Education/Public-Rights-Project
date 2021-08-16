@@ -8,6 +8,12 @@
   margin: 40px 0 30px;
 }
 
+@media (min-width: 768px) {
+  .construct--callout-floating {
+    padding-right: 35px;
+  }
+}
+
 .construct--callout-floating .construct--callout-floating--inner {
   background: #dddddc;
   padding: 20px;

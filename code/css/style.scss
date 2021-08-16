@@ -26,6 +26,9 @@ $breakpoints: ( "small": ( min-width: 768px, ), "medium": ( min-width: 992px, ),
 .construct--callout-floating {
     display: block;
     margin: 40px 0 30px;
+    @include respond-to("small") {
+        padding-right: 35px;
+    }
     .construct--callout-floating--inner {
         background: #dddddc;
         padding: 20px;
