@@ -22,8 +22,8 @@
   .construct--callout-floating .construct--callout-floating--inner {
     padding: 30px;
     padding-top: 40px;
-    width: 90%;
     margin: 0 auto;
+    margin-left: 35px;
     display: block;
   }
 }
