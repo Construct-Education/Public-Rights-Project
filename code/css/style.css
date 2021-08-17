@@ -65,4 +65,19 @@
 .construct--callout-floating .construct--callout-floating--inner .content-container h4 {
   margin-top: 0;
 }
+
+li.ui-state-default.ui-corner-top.ui-tabs-active .ui-tabs-anchor {
+  background: #373A3d;
+}
+
+li.ui-state-default.ui-corner-top .ui-tabs-anchor {
+  color: #ffffff;
+  background: #1d85d4;
+}
+
+.ui-tabs .ui-tabs-panel {
+  background: #555a5f;
+  color: #ffffff;
+  padding: 30px;
+}
 /*# sourceMappingURL=style.css.map */
