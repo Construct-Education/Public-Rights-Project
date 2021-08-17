@@ -74,6 +74,8 @@ li.ui-state-default.ui-corner-top.ui-tabs-active .ui-tabs-anchor {
 li.ui-state-default.ui-corner-top .ui-tabs-anchor {
   color: #ffffff;
   background: #1d85d4;
+  text-decoration: none !important;
+  font-weight: bold;
 }
 
 .ui-tabs .ui-tabs-panel {
