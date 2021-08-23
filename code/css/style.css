@@ -3,6 +3,54 @@
           box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+}
+
+.construct--callout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.construct--callout .icon-container {
+  width: 65px;
+}
+
+.construct--callout .icon-container img {
+  width: 65px;
+}
+
+.construct--callout .content-container {
+  margin-top: 20px;
+}
+
+@media (min-width: 480px) {
+  .construct--callout {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .construct--callout .icon-container {
+    width: 115px;
+    margin-right: 15px;
+  }
+  .construct--callout .icon-container img {
+    width: 75px;
+  }
+  .construct--callout .content-container {
+    width: 100%;
+  }
+}
+
 .construct--callout-floating {
   display: block;
   margin: 40px 0 30px;
@@ -59,15 +107,92 @@
   }
 }
 
-.construct--callout-floating .construct--callout-floating--inner .content-container h3,
-.construct--callout-floating .construct--callout-floating--inner .content-container h2,
-.construct--callout-floating .construct--callout-floating--inner .content-container h1,
-.construct--callout-floating .construct--callout-floating--inner .content-container h4 {
+.construct--callout-floating .content-container h3,
+.construct--callout-floating .content-container h2,
+.construct--callout-floating .content-container h1,
+.construct--callout-floating .content-container h4,
+.construct--callout-borders .content-container h3,
+.construct--callout-borders .content-container h2,
+.construct--callout-borders .content-container h1,
+.construct--callout-borders .content-container h4,
+.construct--callout .content-container h3,
+.construct--callout .content-container h2,
+.construct--callout .content-container h1,
+.construct--callout .content-container h4 {
   margin-top: 0;
 }
 
+.construct--callout-borders {
+  display: block;
+  margin: 40px 0 30px;
+  border-color: #1D84D2;
+  border-style: solid;
+  border-width: 0px 5px;
+  padding: 30px 20px;
+  background: #9FC5E1;
+}
+
+.construct--module-card--container--outer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  -ms-grid-rows: (minmax(150px, 200px))[auto-fit];
+      grid-template-rows: repeat(auto-fit, minmax(150px, 200px));
+  gap: 20px;
+}
+
+.construct--module-card--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  min-height: 200px;
+  padding: 30px;
+  border-radius: 20px;
+  background: #ffffff;
+  background-image: url("../../assets/Images/module-card-bg.png");
+  -webkit-box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.25);
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+.construct--module-card--container:hover {
+  -webkit-box-shadow: 0px 3px 15px -3px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 3px 15px -3px rgba(0, 0, 0, 0.25);
+}
+
+.construct--module-card--container,
+.construct--module-card--container > * {
+  text-decoration: none;
+}
+
+.construct--module-card--container h4 {
+  margin: 0;
+  color: #1D84D2;
+  text-transform: uppercase;
+}
+
+.construct--module-card--container h3 {
+  margin: 10px 0;
+  font-family: serif;
+  font-weight: bold;
+  background-color: #ffffff;
+  color: #37393C;
+  -ms-flex-item-align: self-start;
+      -ms-grid-row-align: self-start;
+      align-self: self-start;
+}
+
 li.ui-state-default.ui-corner-top.ui-tabs-active .ui-tabs-anchor {
-  background: #373A3d;
+  background: #373a3d;
   color: #ffffff;
 }
 
