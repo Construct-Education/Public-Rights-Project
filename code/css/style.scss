@@ -136,11 +136,11 @@ $breakpoints: ( "xsmall": ( min-width: 480px, ), "small": ( min-width: 768px, ),
     border-radius: 20px;
     background: #ffffff;
     background-image: url("../../assets/Images/module-card-bg.png");
-    box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 3px 15px -3px rgba(0, 0, 0, 0.25);
     background-position: center right;
     background-repeat: no-repeat;
     &:hover {
-        box-shadow: 0px 3px 15px -3px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.25);
     }
     &,
     >* {
@@ -181,4 +181,239 @@ li.ui-state-default.ui-corner-top {
     background: #555a5f;
     color: #ffffff;
     padding: 30px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.construct-card--container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 80rem;
+}
+
+.cols {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.col {
+    width: calc(25% - 2rem);
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.container {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+}
+
+.front,
+.back {
+    background-size: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background-position: center;
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    text-align: center;
+    min-height: 280px;
+    height: auto;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.back {
+    background: #37393C;
+}
+
+.front {
+    background: #1D84D2;
+}
+
+.container:hover .front,
+.container:hover .back {
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.inner {
+    -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+    transform: translateY(-50%) translateZ(60px) scale(0.94);
+    top: 50%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: 1px solid transparent;
+    -webkit-perspective: inherit;
+    perspective: inherit;
+    z-index: 2;
+}
+
+.container .back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.container .front {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.container:hover .back {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.container:hover .front {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.front .inner p {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.front .inner p:after {
+    content: '';
+    width: 4rem;
+    height: 2px;
+    position: absolute;
+    background: #C6D4DF;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -.75rem;
+}
+
+.front .inner span {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+}
+
+@media screen and (max-width: 64rem) {
+    .col {
+        width: calc(33.333333% - 2rem);
+    }
+}
+
+@media screen and (max-width: 48rem) {
+    .col {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media screen and (max-width: 32rem) {
+    .col {
+        width: 100%;
+        margin: 0 0 2rem 0;
+    }
+}
+
+.construct-accordion--container-outer {
+    display: block;
+}
+
+.construct-accordion--container-inner {
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.construct-accordion--container-inner>.construct-accordion--tab {
+    padding: 20px 20px;
+    margin: 0;
+    background: #1D84D2;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.construct-accordion--container-inner>.construct-accordion--content {
+    padding: 30px 20px;
+    margin: 5px 20px 0;
+    background: #F0F0F0;
+    box-shadow: -1px 3px 5px -1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: -1px 3px 5px -1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: -1px 3px 5px -1px rgba(0, 0, 0, 0.1);
+    transition: opacity 200ms ease-in-out, transform 350ms ease-in-out, height 400ms ease-in-out;
+}
+
+.construct-accordion--container-inner[aria-expanded="false"]>.construct-accordion--content {
+    transform: scaleY(0);
+    transform-origin: top center;
+    height: 0px;
+    max-height: 0px;
+    opacity: 0;
+    display: inline;
+    transition: none;
+}
+
+.construct-accordion--container-inner[aria-expanded="true"]>.construct-accordion--content {
+    transform: scaleY(1);
+    transform-origin: top center;
+    height: 100%;
+    opacity: 1;
+    display: block;
+}
+
+// PROGRESS BAR
+.progress-bar__bar-container {
+    height: 10px;
+    margin: 12px 0;
+    border: solid var(--ic-brand-primary) 1px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.progress-bar__bar {
+    transition: width .1s;
+    background: var(--ic-brand-primary);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
 }
